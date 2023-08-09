@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Online voting System - Registration</title>
+
+</head>
+
+
+
+
+
+<style>
+    #img{
+        background-image: url(/photo/360_F_192048289_eCDsiiujL4Fj488oVuvEOJYVXvzDDV6i.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+#headerSection{
+    padding: 5px;
+}
+
+#headerSection h1{
+    font-family: cursive;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+}
+#dropbox{
+    padding: 10px;
+    border-radius: 5px;
+    width: 12%;
+
+}
+#loginbtn{
+    padding: 5px;
+    border-radius: 0px 10px 0px 10px; 
+    background-color: rgb(81, 81, 121);
+    color: white;
+    font-size: 15px;  
+    cursor: pointer;
+    
+}
+        #address{
+            width: 23%;
+        }
+        #imagepart{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 25%;
+            background-color: white;
+            
+        }
+        #role{
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            padding: 10px;
+            width: 25%;
+            background-color: rgb(255, 255, 255);
+            
+
+        }
+
+        #role select{
+            border-radius: 5px;
+            padding: 10px;
+
+        }
+        /* #verify{
+            border-radius: 0px 10px 0px 10px ;
+            background-color: rgb(58, 106, 209);
+            color: white;
+            font-size: 20px;
+            margin-left: 5px;
+            height: 30px;
+            cursor: pointer;
+        } */
+    
+        #photo1{
+            mix-blend-mode: multiply;
+            float:  right;
+
+         }
+        #photo2{
+            mix-blend-mode: multiply;
+            float: left;
+
+   
+            
+        }
+    </style>
+    <body id="img" >
+
+    <div id="photo1">
+        <img style="width: 100px;  " src="../photo/download.png">
+    </div>
+    <div id="photo2">
+        <img style="width: 100px;  " src="../photo/download.png">
+    </div>
+
+<center>
+    <div id="headerSection">
+        
+    <h1>Online Voting System in Bihar.</h1>
+    </div>
+    <hr>
+
+    <div id="bodySection">
+    <h1>Registration</h1>
+    <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+        <div id="body1">
+        <input type="text" name="name" placeholder="Enter name" required >
+        <input type="number" name="mobile" placeholder="Enter mobile" required pattern="[0-9]" ><br><br>
+        <!-- <button id="verify" >verify mobile no</button><br><br> -->
+    </div>
+        
+       
+        <input type="password" name="password" placeholder="password" required  >
+        <input type="password" name="cpassword" placeholder="Confirm Password" required><br><br>
+        <input id="address" type="text" name="address" placeholder="Address" required ><br><br>
+        
+        
+        <div id="imagepart" >
+            Upload Image:<input type="file" name="photo" required >
+        </div>
+        <br>
+     
+        <div id="role">
+            Select role: <select name="role" required>
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+                </select>
+             </div>
+             
+         <br><br>
+                <button style=" padding: 5px;
+                                    border-radius: 5px; 
+                                      background-color: blue;
+                                        color: white;
+                                            font-size: 15px;  " >Register</button><br><br>
+                Already user? <a href="../index.html">Login here</a>
+    </form>
+</div>
+</center>
+</body>
+</html>

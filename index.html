@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Online Voting System</title>
+
+</head>
+<body style="background-image: url(./photo/indian\ elections.jpg); background-repeat: no-repeat; background-size: 100% 180%;">
+<style>
+    #imagecss{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 30%;
+}
+#headerSection{
+    padding: 10px;
+}
+
+#headerSection h1{
+    font-family: cursive;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+}
+#dropbox{
+    padding: 10px;
+    border-radius: 5px;
+    width: 12%;
+
+}
+#loginbtn{
+    padding: 5px;
+    border-radius: 0px 10px 0px 10px; 
+    background-color: rgb(81, 81, 121);
+    color: white;
+    font-size: 15px;  
+    cursor: pointer;
+    
+}
+#photo3{
+            mix-blend-mode: multiply;
+            float:  right;
+         
+           
+
+        }
+#photo4{
+            mix-blend-mode: multiply;
+            float: left;
+
+   
+            
+        }
+</style>
+
+<div id="photo3">
+    <img style="width: 100px;  " src="./photo/download.png">
+</div>
+<div id="photo4">
+    <img style="width: 100px;  " src="./photo/download.png">
+</div>
+   
+    <center>
+
+ <div id="headerSection">
+   
+    <h1> Online Voting System in Bihar </h1>
+    <hr>
+    </div>
+<div id="bodySection">
+    <form action="api/login.php" method="POST">
+        <h1>Login</h1>
+        <input style="border-radius: 0px 10px 0px 10px; width: 250px;" type="number" name="mobile" placeholder="Enter mobile no" required pattern="[0-9]"><br><br>
+        <input style="border-radius: 0px 10px 0px 10px; width: 250px;" type="password" name="password" placeholder="Enter password" required ><br><br>
+        <select style="width: 250px; cursor: pointer; border-radius: 0px 10px 0px 10px;" id="dropbox" name="role" required>
+            <option value="1">Voter</option>
+            <option value="2">Group</option>
+    </select><br><br>
+    <button style="cursor: pointer; width: 250px; border-radius: 0px 10px 0px 10px; "  id="loginbtn" type="submit">Login</button><br><br>
+    New user?<a style="text-decoration: none; color: white; " href="routes/register.html">Register here</a>
+    </form>
+</div>
+</center>
+    
+</body>
+</html>
